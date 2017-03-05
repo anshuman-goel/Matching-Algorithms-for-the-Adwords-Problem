@@ -100,36 +100,6 @@ def adwords(function):
     revenue_alg=shuffle_revenue(bid_copy,queries,function)
     revenue_opt=total_budget(bid)
     print(round(revenue_alg/revenue_opt,2))
-    
-def greedy():
-    bid,queries=read()
-    bid_copy=copy.deepcopy(bid)
-    revenue=greedy_revenue(bid_copy,queries)
-    print(revenue)
-    bid_copy=copy.deepcopy(bid)
-    revenue_alg=shuffle_revenue(bid_copy,queries,greedy_revenue)
-    revenue_opt=total_budget(bid)
-    print(round(revenue_alg/revenue_opt,2))
-
-def balance():
-    bid,queries=read()
-    bid_copy=copy.deepcopy(bid)
-    revenue=balance_revenue(bid_copy,queries)
-    print(revenue)
-    bid_copy=copy.deepcopy(bid)
-    revenue_alg=shuffle_revenue(bid_copy,queries,balance_revenue)
-    revenue_opt=total_budget(bid)
-    print(round(revenue_alg/revenue_opt,2))
-
-def msvv():
-    bid,queries=read()
-    bid_copy=copy.deepcopy(bid)
-    revenue=msvv_revenue(bid_copy,queries)
-    print(revenue)
-    bid_copy=copy.deepcopy(bid)
-    revenue_alg=shuffle_revenue(bid_copy,queries,msvv_revenue)
-    revenue_opt=total_budget(bid)
-    print(round(revenue_alg/revenue_opt,2))
 
 random.seed(0)
 
